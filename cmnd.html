@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="fr">
+	<meta charset="utf-8" />
+	<title>Commande</title>
+</head>
+<body>
+    <form action="destination.html" method="post"  oninput=" prixentree.value = parseInt(entree.value),           prixplat.value = parseInt(plat.value),           prixdessert.value = parseInt(dessert.value),                  prixtotal.value=parseInt(prixentree.value) +             parseInt(prixplat.value) + parseInt(prixdessert.value)  ">
+        <fieldset>
+            <legend> Informations</legend>
+            <label for="nom"> Nom :</label>
+            <input type="text" name="nom" placeholder="saisie votre nom"/> <br/> <br/>
+            <label for="prenom"> Prenom :</label>
+            <input type="text" name="prenom" placeholder="saisie votre prenom"/> <br/> <br/>
+            <label for="adresse_postal"> Adresse postale :</label><br/>
+            <textarea name="adresse_postal" id="adresse" rows="3" cols="35" placeholder="saisie votre adresse_postal" ></textarea><br/><br/>
+            <label for="email"> E-mail :</label>
+            <input name= "email"  type= "email" placeholder="saisie votre E-mail" /><br/><br/>
+            <label for="mapage"> Page :</label> 
+            <input name= "mapage"  type= "url" placeholder="saisie votre Url" /><br/><br/>
+            <label for="tel"> N° tel :</label>
+            <input name= "tel"  type= "tel" placeholder="saisie votre N° tel" pattern="[0-9]" /><br/><br/>   
+ 	    </fieldset>   
+	    <fieldset>
+	        <legend> Votre commande</legend>
+	        <label for ="entree" >Entree : </label> 
+            <select name ="entree" id="entree" value="0"> 
+            <option selected value="0">aucune</option> 
+            <option value="100">soupe</option> 
+            <option value="50">oeufs</option> 
+            <option value="120">salade</option>    
+            </select> 
+            <strong> Prix :</strong> <output name="prixentree" for="entree" ></output> <br/><br/>
+            <label for ="plat" >Plat : </label> 
+            <select name ="plat" id="plat" value="0"> 
+            <option selected value="0">aucune</option> 
+            <option value="350">couscous</option> 
+            <option value="250">olives</option> 
+            <option value="300">riz</option>    
+            </select>
+            <strong> Prix :</strong><output name="prixplat" for="plat" ></output><br/><br/>
+            <label for ="dessert" >Dessert : </label> 
+            <select name ="dessert" id="dessert" value="0"> 
+            <option selected value="0">aucune</option> 
+            <option value="40">glace</option> 
+            <option value="50">tarte au citron</option> 
+            <option value="180">crepes</option>    
+            </select> 
+            <strong> Prix :</strong><output name="prixdessert" for="dessert" >0</output>da <br/><br/>
+            <strong>Prix total à payer : </strong><br>    
+	    </fieldset> 
+	    <input type= "submit" value="Envoyer la commande"/> 
+<input type= "reset" value="Initialiser la commande"/> 
+    </form>
+
+</body>
+</html>
